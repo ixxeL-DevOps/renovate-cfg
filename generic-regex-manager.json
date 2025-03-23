@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "description": ["Process various dependencies in YAML files"],
+      "fileMatch": [
+        "(^|/).+\\.env$",
+        "(^|/).+\\.ya?ml(?:\\.j2)?$",
+        "(^|/).+\\.sh$"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( repository=(?<registryUrl>\\S+))?( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?( extractVersion=(?<extractVersion>\\S+))?\\n.+(:\\s|=)(&\\S+\\s)?(?<currentValue>\\S+)",
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.+/(?<currentValue>(v|\\d)[^/]+)( versioning=(?<versioning>.*=?))?( versionTemplate=(?<versionTemplate>.*=?))?( extractVersion=(?<extractVersion>\\S+))?"
+      ],
+      "datasourceTemplate": "{{{datasource}}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "extractVersionTemplate": "{{#if versionTemplate}}{{{versionTemplate}}}{{else}}{{/if}}"
+    }
+  ]
+}
