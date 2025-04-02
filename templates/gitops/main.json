@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "mergeConfidence:all-badges",
+    "helpers:pinGitHubActionDigests",
+    "github>ixxeL-DevOps/renovate-cfg//templates/gitops/automerge-github-actions.json",
+    "github>ixxeL-DevOps/renovate-cfg//templates/gitops/generic-regex-manager.json",
+    "github>ixxeL-DevOps/renovate-cfg//templates/gitops/semantic-commits.json",
+    "github>ixxeL-DevOps/renovate-cfg//templates/gitops/labels.json",
+    ":disableRateLimiting",
+    ":disableRateLimiting",
+    ":gitSignOff",
+    ":rebaseStalePrs"
+  ],
+  "timezone": "Europe/Paris",
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+  "commitBodyTable": true,
+  "commitBody": "Co-authored-by: renovate[bot] <renovate@whitesourcesoftware.com>",
+  "prBodyTemplate": "{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "separateMinorPatch": false,
+  "separateMultipleMinor": false,
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true
+}

@@ -5,7 +5,7 @@
     {
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["major"],
-      "commitMessagePrefix": "feat(container)!: ",
+      "commitMessagePrefix": "feat(docker)!: ",
       "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
@@ -13,7 +13,7 @@
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["minor"],
       "semanticCommitType": "feat",
-      "semanticCommitScope": "container",
+      "semanticCommitScope": "docker",
       "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
@@ -21,7 +21,7 @@
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["patch"],
       "semanticCommitType": "fix",
-      "semanticCommitScope": "container",
+      "semanticCommitScope": "docker",
       "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
@@ -29,7 +29,7 @@
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["digest"],
       "semanticCommitType": "chore",
-      "semanticCommitScope": "container",
+      "semanticCommitScope": "docker",
       "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentDigestShort}} → {{newDigestShort}})"
     },
@@ -44,7 +44,7 @@
       "matchManagers": ["helmv3"],
       "matchUpdateTypes": ["minor"],
       "semanticCommitType": "feat",
-      "semanticCommitScope": "helm",
+      "semanticCommitScope": "Helm",
       "commitMessageTopic": "Chart {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
@@ -52,7 +52,7 @@
       "matchManagers": ["helmv3"],
       "matchUpdateTypes": ["patch"],
       "semanticCommitType": "fix",
-      "semanticCommitScope": "helm",
+      "semanticCommitScope": "Helm",
       "commitMessageTopic": "Chart {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
@@ -60,7 +60,7 @@
       "matchManagers": ["helm-values"],
       "matchUpdateTypes": ["major"],
       "commitMessagePrefix": "feat(docker)!: ",
-      "commitMessageTopic": "Chart {{depName}}",
+      "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
     {
@@ -68,7 +68,7 @@
       "matchUpdateTypes": ["minor"],
       "semanticCommitType": "feat",
       "semanticCommitScope": "docker",
-      "commitMessageTopic": "Chart {{depName}}",
+      "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
     {
@@ -76,7 +76,7 @@
       "matchUpdateTypes": ["patch"],
       "semanticCommitType": "fix",
       "semanticCommitScope": "docker",
-      "commitMessageTopic": "Chart {{depName}}",
+      "commitMessageTopic": "Image {{depName}}",
       "commitMessageExtra": "({{currentVersion}} → {{newVersion}})"
     },
     {
