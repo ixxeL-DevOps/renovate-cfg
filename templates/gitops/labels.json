@@ -19,23 +19,23 @@
     },
     {
       "matchManagers": ["helmv3"],
-      "addLabels": ["renovate/helm"]
+      "addLabels": ["helm"]
     },
     {
       "matchManagers": ["helm-values"],
-      "addLabels": ["renovate/docker"]
+      "addLabels": ["docker"]
     },
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["renovate/docker"]
+      "addLabels": ["docker"]
     },
     {
       "matchDatasources": ["github-releases", "github-tags"],
-      "addLabels": ["renovate/github-release"]
+      "addLabels": ["github-release"]
     },
     {
       "matchManagers": ["github-actions"],
-      "addLabels": ["renovate/github-action"]
+      "addLabels": ["github-action"]
     }
   ]
 }
