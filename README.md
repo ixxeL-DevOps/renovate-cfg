@@ -130,7 +130,7 @@ jobs:
         uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
         id: app-token
         with:
-          app-id: ${{ secrets.GHAPP_APP_ID }}
+          client-id: ${{ secrets.GHAPP_APP_ID }}
           private-key: ${{ secrets.GHAPP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
 
@@ -243,7 +243,7 @@ jobs:
         uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
         id: app-token
         with:
-          app-id: ${{ secrets.GHAPP_APP_ID }}
+          client-id: ${{ secrets.GHAPP_APP_ID }}
           private-key: ${{ secrets.GHAPP_PRIVATE_KEY }}
 
       - name: Checkout
